@@ -13,12 +13,12 @@ int main()
   cin >> x >> y;
 
   sum = x + y;
-  mul = (long long) x * y;
+  mul = (long long)x * y;
   sub = x - y;
-  
+
   cout << x << " + " << y << " = " << sum << "\n";
   cout << x << " * " << y << " = " << mul << "\n";
   cout << x << " - " << y << " = " << sub << "\n";
-  
+
   return 0;
 }

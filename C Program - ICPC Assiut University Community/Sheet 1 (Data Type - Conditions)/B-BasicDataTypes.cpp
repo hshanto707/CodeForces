@@ -12,7 +12,11 @@ int main()
   double e;
 
   cin >> a >> b >> c >> d >> e;
-  cout << a << '\n' << b << '\n' << c << '\n' << d << '\n' << e << '\n';
-  
+  cout << a << '\n'
+       << b << '\n'
+       << c << '\n'
+       << d << '\n'
+       << e << '\n';
+
   return 0;
 }
