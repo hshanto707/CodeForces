@@ -13,10 +13,17 @@ int main()
     int num;
     cin >> num;
 
-    while (num != 0)
+    if (num == 0)
     {
-      cout << num % 10 << ' ';
-      num = num / 10;
+      cout << 0;
+    }
+    else
+    {
+      while (num != 0)
+      {
+        cout << num % 10 << ' ';
+        num = num / 10;
+      }
     }
     cout << '\n';
   }
