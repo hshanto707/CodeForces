@@ -1,4 +1,4 @@
-// Problem Link: https://codeforces.com/problemset/problem/181/A
+// Problem Link: https://codeforces.com/problemset/problem/281/A
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -9,7 +9,9 @@ int main()
 {
   string word; cin >> word;
 
-  cout << word[3] << nl;
+  word[0] = towupper(word[0]);
+
+  cout << word << nl;
 
   return 0;
 }
