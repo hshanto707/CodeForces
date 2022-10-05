@@ -7,18 +7,12 @@ using namespace std;
 
 int main()
 {
-  int n, total = 0;
+  long long n;
   cin >> n;
 
-  for (int i = 1; i <= n; i++) {
-    if (i % 2 != 0)
-      total -= i;
-    else
-      total += i;
-  }
-
-  cout << total;
-
+  if (n % 2 == 0)
+    cout << n / 2 << nl;
+  else
+    cout << -1 * ((n+1) / 2) << nl;
   return 0;
 }
-486A - Calculating Function
