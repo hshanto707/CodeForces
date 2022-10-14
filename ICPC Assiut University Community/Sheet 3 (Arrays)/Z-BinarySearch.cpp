@@ -1,46 +1,26 @@
 // Problem Link: https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/Z
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-  int n, q;
-  cin >> n >> q;
-  int arr[n];
+#define nl '\n'
+#define pb push_back
+#define ppb pop_back
+#define ppf pop_front
 
-  for (int i = 0; i < n; i++)
-  {
-    cin >> arr[i];
-    // cout << "first loop" << '\n';
-  }
+int main() {
+  int n, q; cin >> n >> q;
+  vector<int> arr(n);
+  vector<int> val(q);
+  
+  for (int i = 0; i < n; i++) cin >> arr[i];
+  for (int i = 0; i < q; i++) cin >> val[i];
+  
+  sort(arr.begin(), arr.end());
 
-  for (int i = 0; i < q; i++)
-  {
-    int num;
-    cin >> num;
-    bool isFound = false;
-
-    // cout << "second loop" << '\n';
-
-    for (int j = 0; j < n; j++)
-    {
-      // cout << "third loop" << '\n';
-      if (arr[j] == num)
-      {
-        isFound = true;
-        break;
-      }
-    }
-
-    if (isFound)
-    {
-      cout << "found" << '\n';
-    }
-    else
-    {
-      cout << "not found" << '\n';
-    }
+  for (int i = 0; i < q; i++) {
+    if (binary_search(arr.begin(), arr.end(), val[i])) cout << "found" << nl;
+    else cout << "not found" << nl;
   }
 
   return 0;
