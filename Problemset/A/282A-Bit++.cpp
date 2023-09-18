@@ -4,22 +4,27 @@
 using namespace std;
 
 #define nl '\n'
+#define lli long long int
+#define pb push_back
+#define ppb pop_back
+#define ppf pop_front
 
-int main()
-{
-  int n, x = 0;
-  cin >> n;
+void solve() {
+  int n; cin >> n;
+  int num = 0;
 
   for (int i = 1; i <= n; i++) {
-    string stat; cin >> stat;
+    string s; cin >> s;
 
-    if (stat == "X++" || stat == "++X")
-      x++;
-    else if (stat == "X--" || stat == "--X")
-      x--;
+    if (s == "++X" || s == "X++") num++;
+    else num--;
   }
 
-  cout << x << nl;
+  cout << num << nl;
+}
+
+int main() {
+  solve();
 
   return 0;
 }
